@@ -44,12 +44,8 @@ function Board({ xIsNext, squares, onPlay, winner}) {
     onPlay(nextSquares);
   }
 
-  // const winner = calculateWinner(squares);
-  
-
   return (
     <>
-      
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
         <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
