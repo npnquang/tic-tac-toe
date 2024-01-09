@@ -83,6 +83,11 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.game > :nth-child(1) {
+  width: 100%;
 }
 
 .game-info {

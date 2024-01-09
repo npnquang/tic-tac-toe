@@ -84,6 +84,7 @@ export default function Game() {
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
+  status += " - You are at move #" + currentMove
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -112,8 +113,9 @@ export default function Game() {
 
   return (
     <div className="game">
+      <div className="status">{status}</div>
+
       <div className="game-board">
-        <div className="status">{status}</div>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} winner={winner}/>
       </div>
 
